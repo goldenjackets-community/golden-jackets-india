@@ -46,7 +46,7 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync . s3://goldenjackets.cl/ \
+          aws s3 sync . s3://goldenjackets.in/ \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude ".gitignore" \
@@ -80,15 +80,15 @@ jobs:
           echo "🔍 Smoke Test Starting..."
           ERRORS=0
 
-          HTTP=$(curl -s -o /tmp/index.html -w "%{http_code}" https://d245cwyl4dcv9y.cloudfront.net)
+          HTTP=$(curl -s -o /tmp/index.html -w "%{http_code}" https://d1ajevo6atzuw9.cloudfront.net)
           echo "Main site: HTTP $HTTP"
           [ "$HTTP" = "200" ] && echo "  ✅ OK" || { echo "  ❌ FAIL"; ERRORS=$((ERRORS+1)); }
 
-          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://d245cwyl4dcv9y.cloudfront.net/members.html)
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://d1ajevo6atzuw9.cloudfront.net/members.html)
           echo "Lounge: HTTP $HTTP"
           [ "$HTTP" = "200" ] && echo "  ✅ OK" || { echo "  ❌ FAIL"; ERRORS=$((ERRORS+1)); }
 
-          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://d245cwyl4dcv9y.cloudfront.net/admin.html)
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://d1ajevo6atzuw9.cloudfront.net/admin.html)
           echo "Admin: HTTP $HTTP"
           [ "$HTTP" = "200" ] && echo "  ✅ OK" || { echo "  ❌ FAIL"; ERRORS=$((ERRORS+1)); }
 
@@ -117,5 +117,5 @@ jobs:
             -H "Authorization: token $GH_TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/goldenjackets-community/golden-jackets-global/dispatches \
-            -d '{"event_type":"chapter-updated","client_payload":{"chapter":"chile"}}'
+            -d '{"event_type":"chapter-updated","client_payload":{"chapter":"india"}}'
           echo "✅ Global stats update triggered"
