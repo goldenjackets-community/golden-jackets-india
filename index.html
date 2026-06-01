@@ -150,7 +150,7 @@
     .map-section { text-align: center; padding: 10px 20px 0; }
     .map-section h2 { font-size: 1.4em; color: var(--gold); margin-bottom: 8px; }
     .map-section .tip { font-size: 0.8em; color: var(--text-dimmer); margin-bottom: 5px; }
-    .map-container { margin: 0 auto; position: relative; overflow: visible; }
+    .map-container { margin: 0 auto; position: relative; overflow: visible; min-height: 450px; max-width: 400px; }
     .map-container svg { width: 100%; height: auto; }
     #india-map path { fill: var(--map-fill); stroke: var(--map-stroke); stroke-width: 0.8; transition: fill 0.3s, stroke 0.3s; }
     #india-map path.active { fill: var(--map-active); }
@@ -489,7 +489,7 @@
     <p class="tip">Golden Jackets across India</p>
     <div class="map-container">
       <!-- Connection lines between pins -->
-      <object data="assets/india-map-regions.svg" type="image/svg+xml" style="max-width:400px;height:auto;margin:0 auto;display:block;">India Map</object>
+      <img src="assets/india-map-regions.svg" alt="India Map" style="width:100%;height:auto;display:block;">
       <div class="map-pin" style="top:55%;left:48%" onclick="filterByState('TS')"><span class="pin-icon">📍</span><span class="pin-count gold-count">1</span></div>
     </div>
     
