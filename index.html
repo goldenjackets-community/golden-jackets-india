@@ -391,6 +391,7 @@
       <a href="#articles">Articles &amp; Talks</a>
       <a href="/members.html" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.4);padding:5px 12px;border-radius:18px;color:#FFD700;font-weight:700;font-size:0.85em;">Lounge 🔒</a>
       <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+      <button class="lang-toggle" onclick="toggleLang()" title="Switch language"><img src="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 36 36%27><text y=%2732%27 font-size=%2732%27>🇮🇳</text></svg>" width="20" height="20" class="flag-img"></button>
     </div>
     <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
   </nav>
@@ -1252,3 +1253,42 @@ window.addEventListener('scroll', function() {
 </script></div></body>
 <!-- v1.1 -->
 </html>
+<script>
+var currentLang = 'en';
+var translations = {
+  'Golden Jackets India': 'गोल्डन जैकेट्स इंडिया',
+  'Community celebrating Indian cloud leaders who earned all active AWS certifications. Meet our members and join the journey.': 'भारतीय क्लाउड लीडर्स का समुदाय जिन्होंने सभी सक्रिय AWS प्रमाणपत्र अर्जित किए हैं।',
+  'About Us': 'हमारे बारे में',
+  'Members': 'सदस्य',
+  'Events': 'कार्यक्रम',
+  'Sponsors & Partners': 'प्रायोजक और भागीदार',
+  'Join the journey': 'यात्रा में शामिल हों',
+  'Follow on LinkedIn': 'LinkedIn पर फॉलो करें',
+  'Upcoming Events': 'आगामी कार्यक्रम',
+  'Frequently Asked Questions': 'अक्सर पूछे जाने वाले प्रश्न',
+  'What is the Golden Jacket?': 'गोल्डन जैकेट क्या है?',
+  'The Golden Jacket is the highest recognition in the AWS certification ecosystem — awarded to professionals who earn all 12 active AWS certifications. It was created by Geries AbouAyash, Managing Director at AWS.': 'गोल्डन जैकेट AWS प्रमाणन पारिस्थितिकी तंत्र में सर्वोच्च मान्यता है — उन पेशेवरों को प्रदान की जाती है जो सभी 12 सक्रिय AWS प्रमाणपत्र अर्जित करते हैं।',
+  'How many certifications do I need?': 'मुझे कितने प्रमाणपत्र चाहिए?',
+  'All 12 active AWS certifications must be current and valid: 2 Foundational, 5 Associate, 2 Professional, and 3 Specialty level.': 'सभी 12 सक्रिय AWS प्रमाणपत्र वर्तमान और वैध होने चाहिए: 2 Foundational, 5 Associate, 2 Professional, और 3 Specialty।',
+  'Founded': 'स्थापित',
+  'Certifications': 'प्रमाणपत्र',
+  'Official Partners': 'आधिकारिक भागीदार',
+  'Privacy Policy': 'गोपनीयता नीति',
+  'I\'m a Golden Jacket 🏆': 'मैं गोल्डन जैकेट हूं 🏆',
+  'visits': 'विज़िट',
+  'unique visitors': 'अद्वितीय आगंतुक'
+};
+
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'hi' : 'en';
+  document.querySelectorAll('h1,h2,h3,p,span,a,button,label').forEach(function(el) {
+    var text = el.textContent.trim();
+    if (currentLang === 'hi' && translations[text]) {
+      el.setAttribute('data-en', text);
+      el.textContent = translations[text];
+    } else if (currentLang === 'en' && el.getAttribute('data-en')) {
+      el.textContent = el.getAttribute('data-en');
+    }
+  });
+}
+</script>
