@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golden Jackets Chile - Members Lounge</title>
+  <title>Golden Jackets India - Members Lounge</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,7 +40,7 @@
 </head>
 <body>
   <nav>
-    <div class="logo">GJ <span>Chile</span> · Lounge</div>
+    <div class="logo">GJ <span>India</span> · Lounge</div>
     <a href="/">← Back to site</a>
   </nav>
   <script src="/config.js"></script>
@@ -189,7 +189,7 @@
         <div class="card" id="sec-brand">
           <span class="badge">Brand</span>
           <h3>🎨 Brand Assets</h3>
-          <p>Download official Golden Jackets Chile logos, badges, and social media templates.</p>
+          <p>Download official Golden Jackets India logos, badges, and social media templates.</p>
           <br>
           <a href="#">Coming soon →</a>
         </div>
@@ -209,7 +209,7 @@
   </div>
 
   <footer>
-    <p>Golden Jackets Chile © 2026 · Members Lounge</p>
+    <p>Golden Jackets India © 2026 · Members Lounge</p>
     <p><a href="/">Back to main site</a></p>
   </footer>
 
@@ -459,7 +459,7 @@ async function setupMfa() {
     var data = await resp.json();
     if (data.SecretCode) {
       var email = sessionStorage.getItem('gj_email');
-      var otpauth = 'otpauth://totp/GoldenJacketsChile:' + email + '?secret=' + data.SecretCode + '&issuer=GoldenJacketsChile';
+      var otpauth = 'otpauth://totp/GoldenJacketsIndia:' + email + '?secret=' + data.SecretCode + '&issuer=GoldenJacketsIndia';
       var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(otpauth);
       out.innerHTML = '<p style="color:var(--gold);margin-bottom:12px;">Scan this QR code with Google Authenticator:</p>' +
         '<img src="' + qrUrl + '" style="border-radius:8px;margin-bottom:12px;"><br>' +

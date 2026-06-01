@@ -150,7 +150,7 @@
     .map-section { text-align: center; padding: 10px 20px 0; }
     .map-section h2 { font-size: 1.4em; color: var(--gold); margin-bottom: 8px; }
     .map-section .tip { font-size: 0.8em; color: var(--text-dimmer); margin-bottom: 5px; }
-    .map-container { margin: 0 auto; position: relative; overflow: visible; min-height: 450px; max-width: 400px; }
+    .map-container { margin: 0 auto; position: relative; overflow: visible; max-width: 350px; padding-bottom: 20px; }
     .map-container svg { width: 100%; height: auto; }
     #india-map path { fill: var(--map-fill); stroke: var(--map-stroke); stroke-width: 0.8; transition: fill 0.3s, stroke 0.3s; }
     #india-map path.active { fill: var(--map-active); }
@@ -369,13 +369,13 @@
       <div class="ticker-content">
         <span>🏆 1 Members</span>
         <span>📜 12+ Certifications</span>
-        <span>📍 1 Regions</span>
+        <span>📍 1 States</span>
         <span class="welcome-new">🆕</span>
         <span>🌐 goldenjackets.in</span>
         <span>🇮🇳 Celebrating British AWS Excellence</span>
         <span>🏆 1 Members</span>
         <span>📜 12+ Certifications</span>
-        <span>📍 1 Regions</span>
+        <span>📍 1 States</span>
         <span class="welcome-new">🆕</span>
         <span>🌐 goldenjackets.in</span>
         <span>🇮🇳 Celebrating British AWS Excellence</span>
@@ -476,7 +476,7 @@
     </div>
     <div class="stat">
       <div class="num">1</div>
-      <div class="label">Regions</div>
+      <div class="label">States</div>
     </div>
     <div class="stat">
       <div class="num">2026</div>
@@ -500,35 +500,35 @@
     <h2 style="font-size:1.6em;color:var(--gold);margin-bottom:8px;text-align:center;">🏆 Golden Jackets</h2>
     <p style="color:var(--text-muted);font-size:0.9em;margin-bottom:20px;text-align:center;">Professionals who earned all 12 AWS certifications</p>
     <div class="filter-bar">
-      <label>Filter by Region:</label>
+      <label>Filter by State:</label>
       <select id="stateFilter" onchange="filterMembers()">
-        <option value="AP">Arica y Parinacota</option>
-        <option value="TA">Tarapacá</option>
-        <option value="AN">Antofagasta</option>
-        <option value="AT">Atacama</option>
-        <option value="CO">Coquimbo</option>
-        <option value="VS">Valparaíso</option>
-        <option value="RM">Metropolitana (Hyderabad)</option>
-        <option value="OH">O'Higgins</option>
-        <option value="ML">Maule</option>
-        <option value="NB">Ñuble</option>
-        <option value="BI">Biobío</option>
-        <option value="AR">Araucanía</option>
-        <option value="LR">Los Ríos</option>
-        <option value="LL">Los Lagos</option>
-        <option value="AI">Aysén</option>
-        <option value="MA">Magallanes</option>
+        <option value="">All States</option>
+        <option value="TS">Telangana</option>
+        <option value="AP">Andhra Pradesh</option>
+        <option value="KA">Karnataka</option>
+        <option value="TN">Tamil Nadu</option>
+        <option value="MH">Maharashtra</option>
+        <option value="KL">Kerala</option>
+        <option value="DL">Delhi</option>
+        <option value="UP">Uttar Pradesh</option>
+        <option value="GJ">Gujarat</option>
+        <option value="RJ">Rajasthan</option>
+        <option value="WB">West Bengal</option>
+        <option value="HR">Haryana</option>
+        <option value="PB">Punjab</option>
+        <option value="BR">Bihar</option>
+        <option value="MP">Madhya Pradesh</option>
                                                                                                                                                                                                                               </select>
       <span class="total">Total: 1 members</span>
     </div>
 
     <div class="members-grid">
 
-      <div class="member-card founder" data-state="RM">
+      <div class="member-card founder" data-state="TS">
         <span class="card-number">#1</span>
         <img src="assets/members/vishnu-rachapudi.png" alt="Vishnu Rachapudi" class="photo">
-        <h3>Vishnu Alexander Gaviria González</h3>
-        <div class="location">Hyderabad, Región Metropolitana, India</div>
+        <h3>Vishnu Rachapudi</h3>
+        <div class="location">Hyderabad, Región Telangana, India</div>
         <div class="tags">
           <span class="tag">Golden Jacket</span>
           <span class="tag">Chapter Lead</span>
@@ -818,18 +818,24 @@
       <input type="text" id="applyCity" placeholder="e.g. Hyderabad (country is added automatically)">
       <label>State</label>
       <select id="applyState">
-        <option value="">Select region...</option>
-        <option value="NE">North East</option>
-        <option value="NW">North West</option>
-        <option value="YH">Yorkshire and the Humber</option>
-        <option value="WM">West Midlands</option>
-        <option value="EM">East Midlands</option>
-        <option value="EE">East of India</option>
-        <option value="RM">Hyderabad</option>
-        <option value="SE">South East</option>
-        <option value="SW">South West</option>
-        <option value="WAL">Wales</option>
-        <option value="SCT">Scotland</option>
+        <option value="">Select state...</option>
+        <option value="TS">Telangana</option>
+        <option value="AP">Andhra Pradesh</option>
+        <option value="KA">Karnataka</option>
+        <option value="TN">Tamil Nadu</option>
+        <option value="MH">Maharashtra</option>
+        <option value="KL">Kerala</option>
+        <option value="DL">Delhi</option>
+        <option value="UP">Uttar Pradesh</option>
+        <option value="GJ">Gujarat</option>
+        <option value="RJ">Rajasthan</option>
+        <option value="WB">West Bengal</option>
+        <option value="HR">Haryana</option>
+        <option value="PB">Punjab</option>
+        <option value="BR">Bihar</option>
+        <option value="MP">Madhya Pradesh</option>
+        <option value="OD">Odisha</option>
+        <option value="Other">Other</option>
         <option value="NIR">Northern Ireland</option>
       </select>
       <label>Certification Date</label>
@@ -1184,14 +1190,14 @@ setInterval(updateCountdowns, 1000);
     var label = el.nextElementSibling;
     if(label && label.textContent === 'Members') el.textContent = total;
     if(label && label.textContent === 'Certifications') el.textContent = certs + '+';
-    if(label && label.textContent === 'Regions') el.textContent = regions.size;
+    if(label && label.textContent === 'States') el.textContent = regions.size;
   });
 
   // Update ticker
   document.querySelectorAll('.ticker-content span').forEach(function(s){
     if(s.textContent.match(/🏆 \d+ Members/)) s.textContent = '🏆 ' + total + ' Members';
     if(s.textContent.match(/📜 \d+\+? Certifications/)) s.textContent = '📜 ' + certs + '+ Certifications';
-    if(s.textContent.match(/📍 \d+ Regions/)) s.textContent = '📍 ' + regions.size + ' Regions';
+    if(s.textContent.match(/📍 \d+ States/)) s.textContent = '📍 ' + regions.size + ' States';
   });
 
   // Update total in filter bar
