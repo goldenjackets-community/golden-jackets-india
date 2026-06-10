@@ -767,7 +767,7 @@
         </div>
         <div class="certified">Certified on 2025-04-14</div>
         <div class="socials">
-          <a href="www.linkedin.com/in/anuj-kumar-29429020b" target="_blank">in</a>
+          <a href="https://www.linkedin.com/in/anuj-kumar-29429020b" target="_blank">in</a>
         </div>
       </div>
 
@@ -1295,7 +1295,7 @@
 
     function filterByState(state){
       document.getElementById('stateFilter').value=state;
-      document.getElementById('challengerStateFilter').value=state;
+      var csf=document.getElementById('challengerStateFilter'); if(csf) csf.value=state;
       var cards=document.querySelectorAll('.member-card');
       cards.forEach(function(card){
         if(state==='All'||!card.dataset.state||card.dataset.state===state){
@@ -1325,7 +1325,7 @@
     }
 
     function filterChallengers(){
-      var state=document.getElementById('challengerStateFilter').value;
+      var csf2=document.getElementById('challengerStateFilter'); var state=csf2?csf2.value:'All';
       var cards=document.querySelectorAll('#challengers .member-card');
       cards.forEach(function(card){
         if(state==='All'||!card.dataset.state||card.dataset.state===state){
