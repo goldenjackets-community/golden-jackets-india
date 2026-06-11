@@ -1,0 +1,3 @@
+This commit fixes:
+1. Anuj Kumar LinkedIn: www.linkedin.com -> https://www.linkedin.com
+2. filterByState: guard against null challengerStateFilter element
