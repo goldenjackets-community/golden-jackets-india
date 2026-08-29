@@ -238,6 +238,14 @@
     .member-card.challenger .location { color: #fff; font-weight: 700; }
     .member-card .card-number { position: absolute; top: 8px; right: 12px; font-size: 0.95em; color: rgba(255,215,0,0.8); font-weight: 800; font-size: 0.9em; }
     .member-card.challenger .card-number { color: rgba(192,192,192,0.8); }
+    .member-card.rising::before { background: linear-gradient(var(--angle, 0deg), #CD7F32, #A0522D, #D4944A, #8B4513, #CD7F32); animation: rotateBorder 4s linear infinite; }
+    .member-card.rising { box-shadow: 0 0 20px rgba(205,127,50,0.12); }
+    .member-card.rising h3 { color: #E8A854 !important; }
+    .member-card.rising .tag { background: linear-gradient(135deg, #D4944A, #A0522D); color: #fff; font-weight: 700; }
+    .member-card.rising:hover { box-shadow: 0 8px 40px rgba(205,127,50,0.25); border-color: rgba(205,127,50,0.5); }
+    .member-card.rising .certified { color: #F0B866 !important; }
+    .member-card.rising .location { color: #E8A854 !important; font-weight: 700; }
+    .member-card.rising .card-number { color: rgba(232,168,84,0.8) !important; }
     .member-card { position: relative; }
     .member-card:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 8px 40px rgba(255,215,0,0.25); border-color: rgba(255,215,0,0.5); }
     .member-card:hover .photo { transform: scale(1.08); box-shadow: 0 0 20px rgba(255,215,0,0.3); }
